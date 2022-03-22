@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+:root{
+    --background: linear-gradient(135deg, #667eea7e 0%, #764ba298 100%);
+    --color-secondary:#764ba2;
+    --boton-padding: 30px 50px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 90px 0;
+    max-width: 1200px;
+}
+.subtitle{
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+.hero{
+    
+    height: 100vh;
+    background-image: var(--background), url('../floristeria2/color.png.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+.hero .container{
+    padding: 0;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-start;
+}
+.nav__items{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+.nav__items--cta{
+    border: 1px solid #764ba2;
+}
+.nav__items--footer{
+    padding: 10px;
+}
+.hero__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: beige;
+}
+.hero__texts{
+    width: 80%;
+    margin-bottom: 50px;
+}
+.hero__title{
+    font-size: 3.2rem;
+}
+.hero__subtitle{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 20px 0;
+}
+.hero__cta{
+    display: inline-block;
+    background: rgba(255, 170, 255, 0.513);
+    padding: var(--botton-padding);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 40px;
+}
+.hero__wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; 
+}
+/*about*/
+
+.presentation{
+    padding-top: 0;
+    text-align: center;
+}
+.presentation__picture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+.presentation__copy{
+    width: 80%;
+    margin: 0 auto;
+}
+.presentation__cta{
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    padding: var(--boton-padding);
+    border-radius: 40px;
+}
+.about{
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+}
+.about__img{
+    text-align: center;
+}
+.about__img--left{
+    text-align: left;
+}
+.about__picture{
+    max-width: 80%;
+
+}
+.about__paragrahy{
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+/*trabajos*/
+
+.trabajos{
+    background: #f2f2f2;
+    display: grid;
+height: 550px;
+grid-template-areas: "bolitas ex palma sucuflor"
+"bolitas ex palma sucuflor";
+gap: 10px;
+}
+ .trabajos__item{
+     position: relative;
+     width: 100%;
+     height: 100%;
+      overflow: hidden;
+
+ }
+ .trabajos__img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     cursor: pointer;
+ }
+ .trabajos__item:nth-of-type(1){
+     grid-area: bolitas;   
+ }
+
+ .trabajos__item:nth-of-type(2){
+    grid-area: palma;   
+}
+
+.trabajos__item:nth-of-type(3){
+    grid-area: suc;   
+}
+.trabajos__item:nth-of-type(4){
+    grid-area: sucuflor;   
+}
+.trabajos__hover{
+    position: absolute;
+    background: #536;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform.3s ease-in-out;
+}
+.trabajos__item:hover .trabajos__hover{
+    transform: translateX(0%);
+}
+
+
+.trabajos__icon{
+    margin: 10px;
+    font-size: 30px;
+}
+/*Testimony*/
+.testimont__grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.testimony__item{
+    width: 95%;
+    margin: 0 auto;
+    background: var(--color-secondary);
+    box-shadow: 0 0 6px 0  rgba(0, 0, 0, 0.6);
+    border-radius: 7px;
+    padding: 30px 25px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.testimony__person{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.testimony__img{
+    width: 100%;
+    min-width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: 30px;
+}
+.testimont__name{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.testimont__verification{
+    color: #eafaa0;
+    font-weight: 700;
+}
+.testimont__review{
+    font-weight: 300;
+}
